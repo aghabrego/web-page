@@ -105,7 +105,7 @@ document.querySelectorAll('.timeline-item, .project-card, .skills-category, .edu
 // Contact form handling
 const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     // Get form data
@@ -126,9 +126,35 @@ contactForm.addEventListener('submit', (e) => {
         return;
     }
     
-    // Simulate form submission
-    showNotification('¡Mensaje enviado con éxito! Te contactaré pronto.', 'success');
-    contactForm.reset();
+    // Show loading state
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+    
+    try {
+        // Send form data to Formspree
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            showNotification('¡Mensaje enviado con éxito! Te contactaré pronto.', 'success');
+            contactForm.reset();
+        } else {
+            throw new Error('Error en el envío');
+        }
+    } catch (error) {
+        showNotification('Hubo un error al enviar el mensaje. Inténtalo de nuevo.', 'error');
+    } finally {
+        // Restore button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 // Email validation
