@@ -1,0 +1,76 @@
+# Configuración para GitHub Pages
+
+# Este archivo permite configurar la página para ser desplegada en GitHub Pages
+# sin necesidad de Jekyll
+
+# Para activar GitHub Pages:
+# 1. Ve a Settings > Pages en tu repositorio
+# 2. Selecciona "Deploy from a branch"
+# 3. Selecciona la rama "main" o "gh-pages"
+# 4. Selecciona "/ (root)"
+# 5. Guarda los cambios
+
+# La página estará disponible en:
+# https://[tu-usuario].github.io/[nombre-del-repositorio]
+
+# Archivos importantes para GitHub Pages:
+# - index.html (página principal)
+# - README.md (documentación)
+# - _config.yml (este archivo)
+
+# Configuración básica
+title: "Angel Hidalgo - Portfolio Profesional"
+description: "Chief Technology Officer y Desarrollador de Software especializado en soluciones web y móviles"
+author: "Angel Hidalgo"
+email: ""
+baseurl: ""
+url: ""
+
+# Configuración de Jekyll (opcional)
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins (opcional)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Configuración SEO
+lang: es
+locale: es_PA
+
+# Configuración de redes sociales (para futuras integraciones)
+social:
+  name: "Angel Hidalgo"
+  links:
+    - "https://linkedin.com/in/angel-hidalgo"
+    - "https://github.com/angel-hidalgo"
+
+# Excluir archivos del build
+exclude:
+  - README.md
+  - .gitignore
+  - .git/
+  - node_modules/
+  - package*.json
+
+# Incluir archivos específicos
+include:
+  - _pages
+  - _posts
+
+# Configuración de colecciones (para futuras expansiones)
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Configuración por defecto
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Angel Hidalgo"
