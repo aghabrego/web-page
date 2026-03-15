@@ -30,12 +30,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Header background on scroll
+const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
+    if (window.scrollY > 80) {
+        header.classList.add('scrolled');
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.classList.remove('scrolled');
     }
 });
 
