@@ -89,7 +89,7 @@ body {
 }
 
 .header.scrolled .nav-link {
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
 }
 
 .nav-link:hover {
@@ -97,7 +97,7 @@ body {
 }
 
 .header.scrolled .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 .nav-link::after {
@@ -727,6 +727,11 @@ section {
     padding: 2rem 0;
 }
 
+.footer p,
+.footer a {
+    color: var(--text-light);
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -773,6 +778,14 @@ section {
         transition: 0.3s;
         box-shadow: var(--shadow);
         padding: 2rem 0;
+    }
+
+    .nav-menu .nav-link {
+        color: var(--text-primary) !important;
+    }
+
+    .nav-menu .nav-link:hover {
+        color: var(--primary-color) !important;
     }
 
     .nav-menu.active {
