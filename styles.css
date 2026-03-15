@@ -140,7 +140,9 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background:
+        linear-gradient(135deg, rgba(102, 126, 234, 0.75) 0%, rgba(118, 75, 162, 0.75) 100%),
+        url('https://media.licdn.com/dms/image/v2/C5116AQG2BxpkR3WUqw/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1517041140294?e=1775088000&v=beta&t=BpYPkk3v_UfTvZU9Nci4u1xqCLI7wXz2HAQ-Nm-vWOQ') center/cover no-repeat;
     color: var(--text-light);
     overflow: hidden;
 }
