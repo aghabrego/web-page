@@ -654,33 +654,40 @@ section {
     padding: 2rem;
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.contact-email-box {
+    text-align: center;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.1);
+.contact-email-box i {
+    font-size: 3rem;
     color: var(--text-light);
-    font-family: inherit;
+    margin-bottom: 1rem;
+    display: block;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+.contact-email-box p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
+.contact-email-link {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 2px;
+    transition: border-color var(--transition);
+}
+
+.contact-email-link:hover {
     border-color: var(--text-light);
-    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Footer */
