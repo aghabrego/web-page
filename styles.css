@@ -48,9 +48,9 @@ body {
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(31, 41, 55, 0.97);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -71,7 +71,7 @@ body {
 }
 
 .header.scrolled .nav-logo .logo-text {
-    color: var(--primary-color);
+    color: var(--text-light);
 }
 
 .nav-menu {
@@ -89,7 +89,7 @@ body {
 }
 
 .header.scrolled .nav-link {
-    color: var(--text-primary) !important;
+    color: var(--text-light) !important;
 }
 
 .nav-link:hover {
@@ -97,7 +97,7 @@ body {
 }
 
 .header.scrolled .nav-link:hover {
-    color: var(--primary-color) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .nav-link::after {
@@ -134,7 +134,7 @@ body {
 }
 
 .header.scrolled .bar {
-    background-color: var(--text-primary);
+    background-color: var(--text-light);
 }
 
 /* Hero Section */
@@ -786,6 +786,10 @@ section {
 
     .nav-menu .nav-link:hover {
         color: var(--primary-color) !important;
+    }
+
+    .header.scrolled .nav-menu .nav-link {
+        color: var(--text-primary) !important;
     }
 
     .nav-menu.active {
